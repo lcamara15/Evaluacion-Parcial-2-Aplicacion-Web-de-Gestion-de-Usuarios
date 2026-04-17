@@ -1,0 +1,115 @@
+<div class="container">
+
+  @if (!mostrarPerfil) {
+    <div class="card">
+      <div class="card-header">
+        <h1>Control Panel</h1>
+        <p class="subtitle">Sistema de autenticación</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="info">
+        Ingresa tus credenciales para acceder al módulo de perfil.
+      </p>
+
+      <div class="form-box">
+        <input
+          type="text"
+          placeholder="Usuario o correo"
+          [(ngModel)]="usuarioCorreo"
+          name="usuarioCorreo"
+          (keydown.enter)="login()"
+        />
+
+        <input
+          type="password"
+          placeholder="Contraseña"
+          [(ngModel)]="contrasena"
+          name="contrasena"
+          (keydown.enter)="login()"
+        />
+
+        <button type="button" (click)="login()">Ingresar</button>
+      </div>
+
+      @if (mensajeError) {
+        <p class="error">{{ mensajeError }}</p>
+      }
+    </div>
+  }
+
+  @if (mostrarPerfil) {
+    <div class="card">
+      <div class="card-header">
+        <h1>Perfil</h1>
+        <p class="subtitle">Gestión de datos personales</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="info">
+        Te damos la bienvenida, {{ nombreUsuario }}.
+      </p>
+
+      <p class="info">
+        {{ perfilExiste ? 'Por favor, actualiza la información de tu perfil.' : 'Por favor, completa la información de tu perfil.' }}
+      </p>
+
+      <div class="form-box">
+        <input
+          type="text"
+          placeholder="Nombre"
+          [(ngModel)]="nombre"
+          name="nombre"
+          (keydown.enter)="guardarPerfil()"
+        />
+
+        <input
+          type="text"
+          placeholder="Apellido"
+          [(ngModel)]="apellido"
+          name="apellido"
+          (keydown.enter)="guardarPerfil()"
+        />
+
+        <input
+          type="text"
+          placeholder="Edad"
+          [(ngModel)]="edad"
+          name="edad"
+          (keydown.enter)="guardarPerfil()"
+        />
+
+        <input
+          type="email"
+          placeholder="Correo"
+          [(ngModel)]="correo"
+          name="correo"
+          (keydown.enter)="guardarPerfil()"
+        />
+
+        <input
+          type="text"
+          placeholder="Teléfono"
+          [(ngModel)]="telefono"
+          name="telefono"
+          (keydown.enter)="guardarPerfil()"
+        />
+
+        <button type="button" (click)="guardarPerfil()">
+          {{ perfilExiste ? 'Actualizar perfil' : 'Crear perfil' }}
+        </button>
+
+        <button type="button" class="secondary-button" (click)="cerrarSesion()">
+          Cerrar sesión
+        </button>
+      </div>
+
+      @if (mensajePerfil) {
+        <p class="success">{{ mensajePerfil }}</p>
+      }
+    </div>
+  }
+
+</div>

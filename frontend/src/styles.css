@@ -1,0 +1,139 @@
+/* Fondo general de la app */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #000000, #135b5e);
+}
+
+
+/* Contenedor principal centrado */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+/* Tarjeta principal */
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 20px;
+  padding: 38px 32px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+
+/* Encabezado de la tarjeta */
+.card-header h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Subtítulo */
+.subtitle {
+  margin-top: 10px;
+  color: #000000;
+  font-size: 0.95rem;
+}
+
+.divider {
+  margin: 24px 0;
+  height: 1px;
+  background: #d9e2ec;
+}
+
+/* Texto informativo */
+.info {
+  font-size: 0.96rem;
+  color: #171d24;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 15px;
+  border-radius: 12px;
+  border: 1px solid #cbd2d9;
+  outline: none;
+  font-size: 0.95rem;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  border-color: #2f6fed;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+/* Botón de login */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #000000, #113447);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(29, 78, 216, 0.22);
+}
+
+/* Mensaje de error */
+.error {
+  margin-top: 16px;
+  color: #d62828;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Mensaje de éxito */
+.success {
+  margin-top: 16px;
+  color: #1b7f3b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Contenedor de campos */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Botón secundario */
+.secondary-button {
+  background: #6c757d;
+}
+
+.secondary-button:hover {
+  background: #565e64;
+}
+
+/* Mensaje de éxito */
+.success {
+  margin-top: 16px;
+  color: #1b7f3b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
